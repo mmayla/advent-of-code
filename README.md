@@ -1,6 +1,6 @@
 # Advent of Code Solutions
 
-This repository contains my solutions to the [Advent of Code](https://adventofcode.com) challenges. Advent of Code is an annual event in which a set of programming puzzles are released each day from December 1st through December 25th. These solutions are written in Deno.
+This repository contains my solutions to the [Advent of Code](https://adventofcode.com) challenges. Advent of Code is an annual event in which a set of programming puzzles are released each day from December 1st through December 25th. These solutions are written in TypeScript and Deno.
 
 ## How to Use
 
