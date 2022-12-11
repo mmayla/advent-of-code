@@ -10,9 +10,15 @@
       "type": "node",
       "program": "${file}",
       "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "/opt/homebrew/bin/deno",
+      "runtimeExecutable": "deno",
       "runtimeArgs": ["run", "--allow-all"],
-      "attachSimplePort": 9229
+      "attachSimplePort": 9229,
+      "osx": {
+        "runtimeExecutable": "/opt/homebrew/bin/deno"
+      },
+      "linux": {
+        "runtimeExecutable": "${userHome}/.deno/bin/deno"
+      }
     },
     {
       "request": "launch",
@@ -20,9 +26,15 @@
       "type": "node",
       "program": "${file}",
       "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "/opt/homebrew/bin/deno",
+      "runtimeExecutable": "deno",
       "runtimeArgs": ["run", "--inspect-brk", "--allow-all"],
-      "attachSimplePort": 9229
+      "attachSimplePort": 9229,
+      "osx": {
+        "runtimeExecutable": "/opt/homebrew/bin/deno"
+      },
+      "linux": {
+        "runtimeExecutable": "${userHome}/.deno/bin/deno"
+      }
     }
   ]
 }
