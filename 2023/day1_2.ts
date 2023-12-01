@@ -47,12 +47,6 @@ const numbersSum = lines.reduce((acc, curr) => {
   const firstDigit = convertDigitToNumber(digits[0].digit);
   const lastDigit = convertDigitToNumber(digits[digits.length - 1].digit);
 
-  console.log(firstDigit, lastDigit);
-  console.log(
-    convertDigitToNumber(firstDigit),
-    convertDigitToNumber(lastDigit)
-  );
-
   return acc + Number(`${firstDigit}${lastDigit}`);
 }, 0);
 
