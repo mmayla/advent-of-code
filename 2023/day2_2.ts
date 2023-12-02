@@ -48,28 +48,18 @@ lines.forEach((line) => {
   });
 });
 
-const bag = {
-  blue: 14,
-  green: 13,
-  red: 12,
-};
-
-let gameNumberSum = 0;
-Object.entries(games).forEach(([gameNumber, game]) => {
-  let over = false;
+let gamePowerSum = 0;
+Object.entries(games).forEach(([_gameNumber, game]) => {
+  let maxBlue = 0;
+  let maxGreen = 0;
+  let maxRed = 0;
   game.forEach((colorSet) => {
-    if (
-      colorSet.blue > bag.blue ||
-      colorSet.green > bag.green ||
-      colorSet.red > bag.red
-    ) {
-      over = true;
-    }
+    if (colorSet.blue > maxBlue) maxBlue = colorSet.blue;
+    if (colorSet.green > maxGreen) maxGreen = colorSet.green;
+    if (colorSet.red > maxRed) maxRed = colorSet.red;
   });
 
-  if (!over) {
-    gameNumberSum += parseInt(gameNumber, 10);
-  }
+  gamePowerSum += maxBlue * maxGreen * maxRed;
 });
 
-console.log(gameNumberSum);
+console.log(gamePowerSum);
